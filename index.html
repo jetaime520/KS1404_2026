@@ -1141,6 +1141,88 @@ table{font-variant-numeric:tabular-nums}
       .timetable-mobile-wrap table{min-width:560px;font-size:.9rem}
       .timetable-mobile-wrap th,.timetable-mobile-wrap td{white-space:nowrap;padding:9px 10px}
     }
+    
+    .boat-schedule-cards{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:14px;
+      margin:16px 0;
+    }
+    .boat-schedule-card{
+      border:1px solid var(--line,#d9dee7);
+      border-radius:14px;
+      background:var(--card,#fff);
+      overflow:hidden;
+      min-width:0;
+    }
+    .boat-schedule-head{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      padding:12px 14px;
+      background:rgba(80,110,150,.08);
+      border-bottom:1px solid var(--line,#d9dee7);
+    }
+    .boat-schedule-title{
+      font-weight:800;
+      line-height:1.35;
+    }
+    .boat-schedule-main-time{
+      font-size:1.2rem;
+      font-weight:900;
+      white-space:nowrap;
+    }
+    .boat-route-list{padding:4px 14px}
+    .boat-route-row{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:14px;
+      padding:10px 0;
+      border-bottom:1px dashed var(--line,#d9dee7);
+    }
+    .boat-route-row:last-child{border-bottom:0}
+    .boat-route-place{font-weight:700}
+    .boat-route-time{text-align:right;white-space:nowrap}
+    @media (max-width:720px){
+      .boat-schedule-cards{
+        display:flex;
+        flex-direction:column;
+        gap:12px;
+        margin:14px 0;
+      }
+      .boat-schedule-card{
+        width:100%;
+        border-radius:12px;
+      }
+      .boat-schedule-head{
+        padding:11px 12px;
+      }
+      .boat-schedule-title{
+        font-size:.96rem;
+      }
+      .boat-schedule-main-time{
+        font-size:1.08rem;
+      }
+      .boat-route-list{
+        padding:2px 12px;
+      }
+      .boat-route-row{
+        padding:9px 0;
+      }
+      .boat-route-place,
+      .boat-route-time{
+        font-size:.93rem;
+      }
+    }
+    @media print{
+      .boat-schedule-cards{
+        grid-template-columns:repeat(3,minmax(0,1fr));
+        break-inside:avoid;
+      }
+      .boat-schedule-card{break-inside:avoid}
+    }
     </style><meta content="2026 年 8 月仙台七夕、伊達政宗史蹟、青梅貓町與東京旅行行程手冊。" name="description"/><meta content="#18364d" name="theme-color"/><meta content="noindex,nofollow,noarchive" name="robots"/></head>
 <body>
 <div class="progress" id="prog"></div><div class="idx" id="idx"></div><div class="nav"><button onclick="prev()">‹</button><button onclick="next()">›</button></div>
@@ -1319,12 +1401,7 @@ table{font-variant-numeric:tabular-nums}
 <a href="https://komijian.com/jp-miyagi-tashirojima/" rel="noopener" target="_blank">田代島詳細遊記</a> ｜
               <a href="https://www.ajishimaline.com/pg117.html" rel="noopener" target="_blank">網地島 Line 最新船班</a> ｜
               <a href="https://www.ajishimaline.com/index.html" rel="noopener" target="_blank">網地島 Line 運航公告</a>
-</div></div><div class="card s12 section-block-gap mobile-stack-card mobile-info-card"><h3>網地島 Line｜8/7 適用時刻表</h3><p>2026/8/7 適用官方公布的「7/25～8/16 平日夏季時刻表」。去程固定搭 09:00；回程可在 13:55 與 15:30 兩班之間選擇。</p><div class="table-scroll timetable-mobile-wrap">
-<table>
-<thead><tr><th>方向</th><th>石卷中央</th><th>門脇</th><th>大泊</th><th>仁斗田</th></tr></thead>
-<tbody><tr><td>去程</td><td>09:00 發</td><td>09:10 發</td><td>09:36 抵達</td><td>09:44 抵達</td></tr><tr><td>回程 A｜較早</td><td>14:40 抵達</td><td>14:33 發</td><td>14:02 發</td><td>13:55 發</td></tr><tr><td>回程 B｜較晚</td><td>16:27 抵達</td><td>16:20 發</td><td>15:35 發</td><td>15:30 發</td></tr></tbody>
-</table>
-</div><div class="info-list section-block-gap">
+</div></div><div class="card s12 section-block-gap mobile-stack-card mobile-info-card"><h3>網地島 Line｜8/7 適用時刻表</h3><p>2026/8/7 適用官方公布的「7/25～8/16 平日夏季時刻表」。去程固定搭 09:00；回程可在 13:55 與 15:30 兩班之間選擇。</p><div class="boat-schedule-cards"><div class="boat-schedule-card"><div class="boat-schedule-head"><div class="boat-schedule-title">去程｜固定搭乘</div><div class="boat-schedule-main-time">09:00</div></div><div class="boat-route-list"><div class="boat-route-row"><div class="boat-route-place">石卷中央</div><div class="boat-route-time">09:00 發</div></div><div class="boat-route-row"><div class="boat-route-place">門脇</div><div class="boat-route-time">09:10 發</div></div><div class="boat-route-row"><div class="boat-route-place">大泊</div><div class="boat-route-time">09:36 抵達</div></div><div class="boat-route-row"><div class="boat-route-place">仁斗田</div><div class="boat-route-time">09:44 抵達</div></div></div></div><div class="boat-schedule-card"><div class="boat-schedule-head"><div class="boat-schedule-title">回程 A｜較早離島</div><div class="boat-schedule-main-time">13:55</div></div><div class="boat-route-list"><div class="boat-route-row"><div class="boat-route-place">仁斗田</div><div class="boat-route-time">13:55 發</div></div><div class="boat-route-row"><div class="boat-route-place">大泊</div><div class="boat-route-time">14:02 發</div></div><div class="boat-route-row"><div class="boat-route-place">門脇</div><div class="boat-route-time">14:33 發</div></div><div class="boat-route-row"><div class="boat-route-place">石卷中央</div><div class="boat-route-time">14:40 抵達</div></div></div></div><div class="boat-schedule-card"><div class="boat-schedule-head"><div class="boat-schedule-title">回程 B｜較晚離島</div><div class="boat-schedule-main-time">15:30</div></div><div class="boat-route-list"><div class="boat-route-row"><div class="boat-route-place">仁斗田</div><div class="boat-route-time">15:30 發</div></div><div class="boat-route-row"><div class="boat-route-place">大泊</div><div class="boat-route-time">15:35 發</div></div><div class="boat-route-row"><div class="boat-route-place">門脇</div><div class="boat-route-time">16:20 發</div></div><div class="boat-route-row"><div class="boat-route-place">石卷中央</div><div class="boat-route-time">16:27 抵達</div></div></div></div></div><div class="info-list section-block-gap">
 <div class="info-item"><div class="info-label">本行程搭法</div><div class="info-value">09:00 從石卷中央出發，在大泊下船。回程依現場狀況選擇：13:55 仁斗田出發可較早回仙台；15:30 出發可多留島上約 1 小時 35 分。</div></div>
 <div class="info-item"><div class="info-label">適用日期</div><div class="info-value">2026/8/7 屬於 7/25～8/16 的平日夏季時刻表，且不在特別日期排除名單內。</div></div>
 <div class="info-item"><div class="info-label">運航提醒</div><div class="info-value">兩班都可能因天候、海象或潮位停航、延誤或變更靠港；出發當日上午再次查看官網、官方 X，或致電 0225-93-6125。</div></div>
